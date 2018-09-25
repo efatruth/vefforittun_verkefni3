@@ -1,4 +1,9 @@
-from bottle import route, run, template
+
+from sys import argv
+
+from bottle import *
+import json
+
 # coding=UTF -8
 # livinus felix bassey
 # Skilaverkefni3
@@ -76,7 +81,6 @@ def index():
 def index():
         return template("abouta.tpl", info)
 
-if __name__ == "__main__":
-    run(debug=True)
+run(host='0.0.0.0', port=argv[1])
 
 
